@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
-    <!-- Tailwind CSS -->
+
+    <!-- Daisy Ui & Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-                btn: '#FFDC26',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        primary: '#FFDC26',
+                    }
+                }
             }
-          }
         }
-      </script>
-      
+    </script>
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/44b8d6d199.js" crossorigin="anonymous"></script>
+
     <!-- Font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,19 +34,158 @@
         .font-adlam {
             font-family: "ADLaM Display", serif;
         }
+
         .font-sora {
             font-family: "Sora", serif;
+        }
+
+        .image {
+            background-image: url(./assets/cat-big.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 3fr);
+            gap: 23px;
         }
     </style>
 </head>
 
-<body>
+<body class="font-sora w-full mx-auto">
     <!-- Header section -->
-    <header>
+    <header class="w-full">
+        <!-- Navbar section -->
+        <div class="bg-[#FFF9F4]">
+            <div class="flex justify-between md:justify-evenly lg:justify-evenly items-center">
+                <div class="hidden flex md:flex lg:flex md:items-center lg:items-center md:gap-2 lg:gap-3 md:py-6">
+                    <img src="assets/logo-header.png" alt="">
+                    <h5 class="text-2xl">Browse<span class="text-primary">4</span>Pets</h5>
+                </div>
+                <div>
+                    <ul class="hidden md:gap-6 lg:gap-8  lg:flex md:text-xl lg:text-lg">
+                        <li><a href="">Find a pet</a></li>
+                        <li><a href="">Breeds</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="hidden md:flex lg:flex md:items-center lg:items-center md:gap-2 lg:gap-3">
+                    <i class="fa-regular fa-bell hover:cursor-pointer"></i>
+                    <i class="fa-solid fa-magnifying-glass hover:cursor-pointer"></i>
+                    <button
+                        class="btn hover:bg-primary border-primary hover:border-primary bg-transparent font-normal text-lg text-black px-7 py-2">Login</button>
+                    <button
+                        class="btn hover:bg-transparent hover:border-primary bg-primary border-primary  font-normal text-lg text-black px-7 py-2">Register</button>
+                </div>
+            </div>
+            <div class="flex border-b border-black md:hidden lg:hidden
+                 md:hidden lg:hidden justify-between items-center px-3 py-3">
+                <img class="" src="assets/logo-header.png" alt="">
+                <div class="">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Hero section -->
+        <div class="h-auto mx-3 lg:my-20 md:my-10 lg:items-center lg:mx-32 md:mx-16 w-auto image bg-left-bottom">
+            <div class="space-y-5 text-left lg:pb-80 md:50 pb-40">
+                <h2 class="font-adlam text-2xl lg:text-5xl md:text-4xl">Pamper Your Pet,<br>Because They Deserve <br>
+                    the Bes
+                </h2>
+                <p class="text-sm text-gray-500">Discover a world of treats, toys, and essentials handpicked for <br>
+                    your furry friends. Shop now and
+                    make
+                    tails wag with joy!</p>
+                <button
+                    class="btn hover:bg-transparent hover:border-primary bg-primary border-primary font-normal text-lg text-black px-7 py-2">Find
+                    a pet</button>
+            </div>
+        </div>
     </header>
+
     <!-- Main section -->
-    <main>
+    <main class="font-sora">
+
+        <!-- Category section -->
+        <section class="lg:mx-[140px] md:mx-8 mx-3">
+            <!-- Heading -->
+            <h2 class="font-medium text-black text-left font-adlam my-7 text-4xl mx-auto">Browse By Categories</h2>
+
+            <!-- Cards -->
+            <div class="md:flex lg:flex gap-4 justify-center mx-auto grid grid-cols-2">
+
+                <!-- Card-1 -->
+                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                    <div class="avatar">
+                        <div class="rounded-full bg-white md:p-3 p-7">
+                            <img src="assets/dog-cartoon.png" alt="">
+                        </div>
+                    </div>
+                    <h3>Dog</h3>
+                    <p>3 items</p>
+                </div>
+
+                <!-- Card-2 -->
+                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                    <div class="avatar">
+                        <div class="rounded-full bg-white md:p-3 p-7">
+                            <img src="assets/fish-cartoon.png" />
+                        </div>
+                    </div>
+                    <h3>Fish</h3>
+                    <p>3 items</p>
+                </div>
+
+                <!-- Card-3 -->
+                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                    <div class="avatar">
+                        <div class="rounded-full bg-white md:p-3 p-7">
+                            <img src="assets/cat-cartoon.png" />
+                        </div>
+                    </div>
+                    <h3>Cat</h3>
+                    <p>3 items</p>
+                </div>
+
+                <!-- Card-4 -->
+                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                    <div class="avatar">
+                        <div class="rounded-full bg-white md:p-3 p-7">
+                            <img src="assets/bird-cartoon.png" />
+                        </div>
+                    </div>
+                    <h3>Bird</h3>
+                    <p>3 items</p>
+                </div>
+
+                <!-- Card-5 -->
+                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                    <div class="avatar">
+                        <div class="rounded-full bg-white md:p-3 p-7">
+                            <img src="assets/mouse-cartoon.png" />
+                        </div>
+                    </div>
+                    <h3>Small pet</h3>
+                    <p>3 items</p>
+                </div>
+
+                <!-- Card-6 -->
+                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                    <div class="avatar">
+                        <div class="rounded-full bg-white md:p-3 p-7">
+                            <img src="assets/rabbit-cartoon.png" />
+                        </div>
+                    </div>
+                    <h3>Rabbit</h3>
+                    <p>2 items</p>
+                </div>
+            </div>
+        </section>
+
+        
     </main>
+
     <!-- Footer section -->
     <footer>
     </footer>
