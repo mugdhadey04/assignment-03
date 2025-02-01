@@ -16,6 +16,8 @@
                     colors: {
                         clifford: '#da373d',
                         primary: '#FFDC26',
+                        foot: 'rgba(255, 220, 38, 0.5)',
+                        description: 'rgba(17, 17, 17, 0.7)'
                     }
                 }
             }
@@ -45,10 +47,10 @@
             background-size: contain;
         }
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 3fr);
-            gap: 23px;
+        .pri-image {
+            background-image: url(./assets/cute-pet-small.png);
+            background-repeat: no-repeat;
+            background-size: contain;
         }
     </style>
 </head>
@@ -87,6 +89,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Hero section -->
         <div class="h-auto mx-3 lg:my-20 md:my-10 lg:items-center lg:mx-32 md:mx-16 w-auto image bg-left-bottom">
             <div class="space-y-5 text-left lg:pb-80 md:50 pb-40">
@@ -113,10 +116,10 @@
             <h2 class="font-medium text-black text-left font-adlam my-7 text-4xl mx-auto">Browse By Categories</h2>
 
             <!-- Cards -->
-            <div class="md:flex lg:flex gap-4 justify-center mx-auto grid grid-cols-2">
+            <div class="md:flex lg:flex flex-grow flex-1 gap-6 justify-center mx-auto grid grid-cols-2">
 
                 <!-- Card-1 -->
-                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                <div class="rounded-lg bg-[#F9DF8A] px-12 py-7 text-center space-y-1">
                     <div class="avatar">
                         <div class="rounded-full bg-white md:p-3 p-7">
                             <img src="assets/dog-cartoon.png" alt="">
@@ -127,7 +130,7 @@
                 </div>
 
                 <!-- Card-2 -->
-                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                <div class="rounded-lg bg-[#F9DF8A] px-12 py-7 text-center space-y-1">
                     <div class="avatar">
                         <div class="rounded-full bg-white md:p-3 p-7">
                             <img src="assets/fish-cartoon.png" />
@@ -138,7 +141,7 @@
                 </div>
 
                 <!-- Card-3 -->
-                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                <div class="rounded-lg bg-[#F9DF8A] px-12 py-7 text-center space-y-1">
                     <div class="avatar">
                         <div class="rounded-full bg-white md:p-3 p-7">
                             <img src="assets/cat-cartoon.png" />
@@ -149,7 +152,7 @@
                 </div>
 
                 <!-- Card-4 -->
-                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                <div class="rounded-lg bg-[#F9DF8A] px-12 py-7 text-center space-y-1">
                     <div class="avatar">
                         <div class="rounded-full bg-white md:p-3 p-7">
                             <img src="assets/bird-cartoon.png" />
@@ -160,7 +163,7 @@
                 </div>
 
                 <!-- Card-5 -->
-                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                <div class="rounded-lg bg-[#F9DF8A] px-12 py-7 text-center space-y-1">
                     <div class="avatar">
                         <div class="rounded-full bg-white md:p-3 p-7">
                             <img src="assets/mouse-cartoon.png" />
@@ -171,7 +174,7 @@
                 </div>
 
                 <!-- Card-6 -->
-                <div class="rounded-lg bg-[#F9DF8A] px-10 py-7 text-center space-y-1">
+                <div class="rounded-lg bg-[#F9DF8A] lg:px-13 md:px-11 py-7 text-center space-y-1">
                     <div class="avatar">
                         <div class="rounded-full bg-white md:p-3 p-7">
                             <img src="assets/rabbit-cartoon.png" />
@@ -183,12 +186,328 @@
             </div>
         </section>
 
-        
+        <!-- Trending Pet products -->
+        <section class="bg-[#FFF9F4]">
+            <div class=" lg:py-[140px] lg:my-[140px] py-20 md:p-8 p-3">
+                <!-- Heading  -->
+                <h2 class="mb-7 lg:ml-[130px] mx-auto text-4xl text-black font-adlam">Trending Pet Products</h2>
+
+                <!-- Card  -->
+                <div class="lg:flex md:flex justify-center gap-5">
+                    <div class="bg-[#F9DF8A] rounded-lg p-5 ">
+                        <div class="lg:mx-1 lg:mt-10 space-y-4 text-left">
+                            <h3 class="font-adlam font-medium text-3xl">T-Shirt for Dogs</h3>
+                            <p class="text-sm">Discover a world of treats, toys, and <br> essentials handpicked for </p>
+                            <button class="btn btn-ghost bg-white ">Shop now</button>
+                        </div>
+                        <div>
+                            <img class=" max-w-40 max-h-40 ml-auto" src="assets/cute-pet-small.png" alt="">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div
+                            class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-center lg:gap-4 md:gap-3 gap-2">
+                            <div
+                                class="flex bg-white border border-[rgba(17, 17, 17, 0.1)] gap-4 rounded-lg  items-center py-4 pl-4">
+                                <div>
+                                    <div class="avatar]">
+                                        <div class=" bg-[#FFF9F4] p-2 lg:p-5 md:p-3 rounded-xl">
+                                            <img class="" src="assets/dog-cartoon.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="bg-white lg:pr-8 md:pr-7 ">
+                                        <div class="flex ite ms-center space-x-2 space-y-3">
+                                            <div class="rating">
+                                                <input type="radio" name="rating-2"
+                                                    class="mask mask-star-2 bg-orange-400" />
+                                            </div>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="text-base font-medium">Pet Bed</h3>
+                                            <p class="text-sm lg:text-base md:text-base md:font-medium lg:font-medium">
+                                                $39.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex  bg-white border border-[rgba(17, 17, 17, 0.1)] gap-4 rounded-lg  items-center py-4 pl-4">
+                                <div>
+                                    <div class="avatar]">
+                                        <div class=" bg-[#FFF9F4] p-5 rounded-xl">
+                                            <img class="" src="assets/fish-cartoon.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="bg-white ">
+                                        <div class="flex ite ms-center space-x-2 space-y-3">
+                                            <div class="rating">
+                                                <input type="radio" name="rating-2"
+                                                    class="mask mask-star-2 bg-orange-400" />
+                                            </div>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="text-base font-medium">Pet Bed</h3>
+                                            <p class="text-base font-medium">$39.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex  bg-white border border-[rgba(17, 17, 17, 0.1)] gap-4 rounded-lg  items-center py-4 pl-4">
+                                <div>
+                                    <div class="avatar]">
+                                        <div class=" bg-[#FFF9F4] p-5 rounded-xl">
+                                            <img class="" src="assets/bird-cartoon.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="bg-white ">
+                                        <div class="flex items-center space-x-2 space-y-3">
+                                            <div class="rating">
+                                                <input type="radio" name="rating-2"
+                                                    class="mask mask-star-2 bg-orange-400" />
+                                            </div>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="text-base font-medium">Pet Bed</h3>
+                                            <p class="text-base font-medium">$39.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex bg-white border border-[rgba(17, 17, 17, 0.1)] gap-4 rounded-lg  items-center py-4 pl-4">
+                                <div>
+                                    <div class="avatar]">
+                                        <div class=" bg-[#FFF9F4] p-5 rounded-xl">
+                                            <img class="" src="assets/rabbit-cartoon.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="bg-white ">
+                                        <div class="flex items-center space-x-2 space-y-3">
+                                            <div class="rating">
+                                                <input type="radio" name="rating-2"
+                                                    class="mask mask-star-2 bg-orange-400" />
+                                            </div>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="text-base font-medium">Pet Bed</h3>
+                                            <p class="text-base font-medium">$39.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex bg-white border border-[rgba(17, 17, 17, 0.1)] gap-4 rounded-lg  items-center py-4 pl-4">
+                                <div>
+                                    <div class="avatar]">
+                                        <div class=" bg-[#FFF9F4] p-5 rounded-xl">
+                                            <img class="" src="assets/bird-cartoon.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="bg-white ">
+                                        <div class="flex items-center space-x-2 space-y-3">
+                                            <div class="rating">
+                                                <input type="radio" name="rating-2"
+                                                    class="mask mask-star-2 bg-orange-400" />
+                                            </div>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="text-base font-medium">Pet Bed</h3>
+                                            <p class="text-base font-medium">$39.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex bg-white border border-[rgba(17, 17, 17, 0.1)] gap-4 rounded-lg  items-center py-4 pl-4">
+                                <div>
+                                    <div class="avatar]">
+                                        <div class=" bg-[#FFF9F4] p-5 rounded-xl">
+                                            <img class="" src="assets/pet-couch.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="bg-white ">
+                                        <div class="flex items-center space-x-2 space-y-3">
+                                            <div class="rating">
+                                                <input type="radio" name="rating-2"
+                                                    class="mask mask-star-2 bg-orange-400" />
+                                            </div>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="text-base font-medium">Pet Bed</h3>
+                                            <p class="text-base font-medium">$39.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex bg-white border border-[rgba(17, 17, 17, 0.1)] gap-4 rounded-lg  items-center py-4 pl-4">
+                                <div>
+                                    <div class="avatar]">
+                                        <div class=" bg-[#FFF9F4] p-5 rounded-xl">
+                                            <img class="" src="assets/fish-cartoon.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="bg-white ">
+                                        <div class="flex items-center space-x-2 space-y-3">
+                                            <div class="rating">
+                                                <input type="radio" name="rating-2"
+                                                    class="mask mask-star-2 bg-orange-400" />
+                                            </div>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="text-base font-medium">Pet Bed</h3>
+                                            <p class="text-base font-medium">$39.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex bg-white border border-[rgba(17, 17, 17, 0.1)] gap-4 rounded-lg  items-center py-4 pl-4">
+                                <div>
+                                    <div class="avatar]">
+                                        <div class=" bg-[#FFF9F4] p-5 rounded-xl">
+                                            <img class="" src="assets/pet-couch.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="bg-white ">
+                                        <div class="flex items-center space-x-2 space-y-3">
+                                            <div class="rating">
+                                                <input type="radio" name="rating-2"
+                                                    class="mask mask-star-2 bg-orange-400" />
+                                            </div>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="text-base font-medium">Pet Bed</h3>
+                                            <p class="text-base font-medium">$39.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="lg:flex hidden bg-white border border-[rgba(17, 17, 17, 0.1)] gap-4 rounded-lg  items-center py-4 pl-4">
+                                <div>
+                                    <div class="avatar]">
+                                        <div class=" bg-[#FFF9F4] p-5 rounded-xl">
+                                            <img class="" src="assets/rabbit-cartoon.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="bg-white ">
+                                        <div class="flex items-center space-x-2 space-y-3">
+                                            <div class="rating">
+                                                <input type="radio" name="rating-2"
+                                                    class="mask mask-star-2 bg-orange-400" />
+                                            </div>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="text-base font-medium">Pet Bed</h3>
+                                            <p class="text-base font-medium">$39.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Price section -->
+        <section class="lg:mx-[140px] md:mx-8 mx-3 lg:mb-80">
+            <h2 class="font-adlam text-black font-medium py-6 mb-3 text-3xl md:text-4xl lg:text-4xl">Everyday low Price
+            </h2>
+            <div class="lg:flex justify-center gap-4">
+                <div
+                    class="bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] flex justify-center items-center rounded-lg mb-6 lg:flex items-center">
+                    <div class="w-auto hidden text-black space-y-3 lg:block md:block lg:py-32 pr-0 lg:pl-[85px]">
+                        <p class="text-lg ">Under Price</p>
+                        <h3 class="font-adlam font-medium text-3xl">Pet Grooming Mitt</h3>
+                        <p class="font-bold text-white text-xl">(Easy Hair Removal)</p>
+                        <h1 class="text-6xl font-adlam">$7.99</h1>
+                    </div>
+                    <div class="block lg:hidden md:hidden pt-12 pl-14">
+                        <h3 class="font-adlam font-medium text-3xl">T-Shirt for Dogs</h3>
+                        <h1 class="text-4xl text-white font-adlam">$7.99</h1>
+                    </div>
+                    <div>
+                        <img class="w-auto" src="assets/cute-dog-mid.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-[#FFF9F4] to-[#F9DF8A] justify-center rounded-lg mb-6">
+                    <div class="pt-12 pl-14">
+                        <h3 class="font-adlam font-medium text-3xl">T-Shirt for Dogs</h3>
+                        <h1 class="text-4xl text-primary font-adlam">$7.99</h1>
+                    </div>
+                    <div>
+                        <img class="pl-48" src="assets/cute-pet-mid.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer section -->
-    <footer>
-    </footer>
+        <footer class=" bg-foot lg:p-10">
+            <div class="pt-44 lg:flex items-center justify-around">
+                <aside>
+                    <div class="lg:flex gap-3 items-center">
+                        <img src="assets/logo-footer.png" alt="">
+                        <h5 class="text-xl">Browse<span class="text-primary">4</span>Pets</h5>
+                    </div>
+                    <p class=" text-description">
+                        <br>
+                        Discover a world of treats, toys, and <br>
+                        essentials handpicked for your furry <br>
+                        friends
+                    </p>
+                </aside>
+
+                <ul>
+                    <li><a href="">Find a pet</a></li>
+                    <li><a href="">Breeds</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+
+                <div>
+                    <h4>Follow Us</h4>
+                    <ul class="lg:flex gap-2">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
 </body>
 
 </html>
